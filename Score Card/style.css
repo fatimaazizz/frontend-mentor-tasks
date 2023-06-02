@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url(./static/HankenGrotesk-Medium.ttf) format("truetype");
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url(./static/HankenGrotesk-Bold.ttf) format("truetype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url(./static/HankenGrotesk-ExtraBold.ttf) format("truetype");
+    font-weight: 800;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+font-family:'HankenGrotesk',Arial, Helvetica, sans-serif ;
+}
+.container
+{
+    display: flex;
+    min-height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+.card-container
+{
+    display: flex;
+    width:737px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0px 4px 9px 0px hsl(256deg 72% 46% / 17%);
+    margin-block: 24px;
+}
+.left-card
+{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    background:linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 50%);
+    align-items: center;
+    border-radius: 32px;
+    box-sizing: border-box;
+    padding: 21px;
+    gap:20px;
+}
+.heading{
+    font-size: 24px;
+    color: hsl(241, 100%, 89%);
+    margin-block: 16px;
+}
+.total-score{
+    
+    border-radius: 50%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.obtain_mark{
+    font-size: 72px;
+    line-height: 83px;
+    font-weight: bolder;
+    color:hsl(0, 0%, 100%);
+}
+.subject-dis{
+    display: flex;
+    width:50%;
+}
+.remarks-container{
+    text-align: center;
+}
+.total_mark{
+    color:hsl(241, 100%, 89%);
+    font-size: 18px;
+    line-height: 1;
+}
+.remark{
+    font-size: 32px;
+    margin: 9px 0;
+    color:hsl(0, 0%, 100%);
+}
+.remarks-container p{
+    max-width: 262px;
+    font-size: 18px;
+    margin-block: 13px  34px;
+    color: hsl(241, 100%, 89%);
+}
+.right-card{
+    width: 50%;
+    padding: 39px 40px 40px 40px;
+    box-sizing: border-box;
+}
+.subject{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 18px 16px 16px;
+    border-radius: 10px;
+}
+.red{
+    background: hsl(0deg 100% 67% / 10%);
+}
+.yellow{
+    background: hsl(39deg 100% 56% / 10%);
+}
+.green{
+    background: hsl(166deg 100% 37% / 10%);
+}
+.voilet{
+    background: hsl(234deg 85% 45% / 10%);
+}
+.red .subject-name{
+    color: hsl(0deg 100% 67% );
+}
+.yellow .subject-name{
+    color: hsl(39deg 100% 56%);
+}
+.green .subject-name{
+    color: hsl(166deg 100% 37%);
+}
+.voilet .subject-name{
+    color: hsl(234deg 85% 45%);
+}
+.subject .total{
+color:hsl(224deg 30% 27% / 60%);
+}
+.subject span{
+    margin-left: 10px;
+    font-size: 18px;
+}
+.subject .subject-name{
+font-weight: 700;
+margin-left: 12px;
+}
+.marks{
+    font-size: 18px;
+}
+.summary
+{
+    margin: 0 0 27px 0;
+}
+.subjects-container{
+    display: flex;
+    flex-direction: column;
+    gap:17px;
+}
+.btn{
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    padding: 20px;
+    line-height: 1;
+    font-size: 18px;
+    color: hsl(0, 0%, 100%);
+    background: hsl(224, 30%, 27%);
+    margin-top: 42px;
+}
+.btn:hover,.btn:active{
+    background: linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 70%);
+    cursor: pointer;
+
+}
+@media (max-width:880px) {
+
+    .card-container{
+        flex-direction: column;
+        margin-block: 0;
+        border-radius: 0;
+    }
+    .left-card{
+        width: 100%;
+        border-top-left-radius:0;
+        border-top-right-radius:0;
+    }
+    .right-card{
+        width: 100%;
+    }
+}
+@media (max-width:567px) {
+    .heading{
+        margin-block: 2px 4px;
+        font-size: 18px;
+    }
+    .total-score{
+        width:140px;
+        height:140px;
+    }
+    .obtain_mark
+    {
+        font-size: 52px;
+        line-height: 1.5;
+    }
+    .remark{
+        font-size: 24px;
+        margin:4px 0;
+    }
+    .remarks-container p
+    {
+        font-size: 16px;
+    margin-block: 9px 19px;
+    }
+    .right-card{`
+        padding: 24px 31px;
+    }
+    .summary{
+        font-size: 18px;
+        margin: 0 0 24px 0;
+    }
+    .subject{
+        padding: 16px 14px 16px 13px;
+    }
+    .subject .subject-name{
+        margin-left: 10px;
+    }
+    .subject span{
+        font-size: 16px;
+    }
+    .btn{margin-top: 25px;
+        font-weight: 700;
+        font-size: 17px;
+    }
+    .subject  .total{
+        margin-left: 7px;
+    }
+}
